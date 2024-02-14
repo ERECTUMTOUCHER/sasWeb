@@ -383,27 +383,28 @@
   border-radius: 10px; /* Add border-radius for rounded corners */
 }
 
+/* CSS */
+#container {
+  position: relative;
+}
+
+.cs-picture {
+  width: 100%;
+  max-width: 100%;
+}
+
 .svg-blob {
   position: absolute;
   z-index: 40;
   top: 0;
   left: 0;
   opacity: 0;
-  animation: fadeInApproach 2s forwards, approachImage 2s forwards;
 }
 
-@keyframes fadeInApproach {
-  to {
-    opacity: 10;
-  }
-}
-
-@keyframes approachImage {
-  to {
-    top: -10%;
-    left: 55%;
-    transform: translate(-80%, -10%);
-  }
+/* Adjust these values as needed */
+.svg-blob.active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 }
 /* Tablet - 768px */
