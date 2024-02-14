@@ -1,76 +1,82 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
 }
 
-.taskbar {
-  background-color: #333;
-  color: #fff;
+.nav, .navbar {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  list-style: none;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  flex-wrap: nowrap;
 }
 
-.logo img {
-  width: 50px; /* Adjust size as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.buttons {
-  display: flex;
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  text-align: center;
+.nav a {
+  color: #3c3c3c; /* Dark gray color */
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  padding: 12px 24px; /* Added padding */
-  margin: 4px 2px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
 }
 
-.button::before {
+.nav-item {
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-item:after {
   content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparent;
+  transition: top .3s ease-out;
+}
+
+.nav-item:hover:after {
+  top: 0;
+  background: #3c3c3c; /* Dark gray color */
+}
+
+.active:after {
+  height: 2px;
+  background: #e74c3c; /* Red color */
+}
+
+.page-container {
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+
+.section-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2);
-  transition: all 0.5s;
-  border-radius: 50%;
-  z-index: 0;
+  width: 90%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.button:hover::before {
-  width: 0;
-  height: 0;
-}
-
-.button span {
-  position: relative;
-  z-index: 1;
-}
-
-.content {
-  padding: 50px;
-}
-
-h1 {
-  color: #333;
-}
-
-p {
-  color: #555;
-}
+.section-container h4 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #3c3c3
 
 /*-- -------------------------- -->
 <---           Hero             -->
