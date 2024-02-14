@@ -1,3 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.taskbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.taskbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.taskbar a:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
