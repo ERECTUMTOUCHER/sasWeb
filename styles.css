@@ -1,4 +1,3 @@
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-1619 {
     padding: var(--sectionPadding);
@@ -44,10 +43,19 @@
     width: 3rem;
     height: auto;
   }
+  #hero-1619 .cs-title {
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 100%;
+    margin: 0 0 2.5rem 0;
+    color: #fff;
+    position: relative;
+  }
   /* More CSS rules for #hero-1619 ... */
 }
 
-/* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #hero-1619 {
     padding-bottom: 0;
@@ -55,17 +63,14 @@
   /* More CSS rules for #hero-1619 at tablet size... */
 }
 
-/* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
   /* More CSS rules for #hero-1619 at large desktop size... */
 }
 
-/* Large Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
   /* More CSS rules for #hero-1619 with parallax effect... */
 }
 
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbsr-1599 {
     padding: var(--sectionPadding);
@@ -73,7 +78,6 @@
   /* More CSS rules for #sbsr-1599 at mobile size... */
 }
 
-/* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #sbsr-1599 .cs-container {
     max-width: 80rem;
@@ -82,7 +86,6 @@
   /* More CSS rules for #sbsr-1599 at tablet size... */
 }
 
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #gallery-1716 {
     padding: var(--sectionPadding);
@@ -93,7 +96,342 @@
   /* More CSS rules for #gallery-1716 at mobile size... */
 }
 
-/* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   /* More CSS rules for #gallery-1716 at tablet size... */
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-1599 {
+    padding: var(--sectionPadding);
+  }
+  #sbsr-1599 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-1599 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-1599 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #sbsr-1599 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #sbsr-1599 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #sbsr-1599 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #sbsr-1599 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-1599 .cs-picture {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-1599 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-1599 .cs-picture1 {
+    height: 95vw;
+    max-height: 25rem;
+  }
+  #sbsr-1599 .cs-picture2 {
+    height: 111vw;
+    max-height: 31.25rem;
+  }
+  #sbsr-1599 .cs-stats-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 28px - 40px */
+    gap: clamp(1.75rem, 3vw, 2.5rem);
+  }
+  #sbsr-1599 .cs-stats {
+    width: 100%;
+    max-width: 39.375rem;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 0.75rem;
+  }
+  #sbsr-1599 .cs-stat {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1.5rem 0;
+    border-bottom: 1px solid var(--primary);
+    /* making flex so we can align a heading with 1 line to the bottom */
+    display: flex;
+    grid-column: span 4;
+    flex-direction: column;
+    align-self: stretch;
+    align-content: space-between;
+  }
+  #sbsr-1599 .cs-number {
+    /* 31px - 39px */
+    font-size: clamp(1.9375rem, 3vw, 2.4375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: left;
+    color: var(--headerColor);
+    display: block;
+    margin: 0 0 0.25rem 0;
+  }
+  #sbsr-1599 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-align: left;
+    /* auto margin top will push text to bottom if there's only one line */
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #container {
+    position: relative;
+  }
+
+  #image {
+    width: 80%;
+    height: 80%;
+    display: block;
+    object-position: 30ch 1em;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+  }
+
+  .svg-blob {
+    position: absolute;
+    z-index: 40;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeInApproach 2s forwards, approachImage 2s forwards;
+  }
+
+  @keyframes fadeInApproach {
+    to {
+      opacity: 10;
+    }
+  }
+
+  @keyframes approachImage {
+    to {
+      top: -10%;
+      left: 55%;
+      transform: translate(-80%, -10%);
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-1599 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #sbsr-1599 .cs-content {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbsr-1599 .cs-picture1 {
+    /* 340px - 460px */
+    min-height: clamp(21.25rem, 35vw, 28.75rem);
+    height: 100%;
+    max-height: 100%;
+  }
+  #sbsr-1599 .cs-picture2 {
+    /* 530px - 660px */
+    min-height: clamp(33.125rem, 45vw, 41.25rem);
+    height: 100%;
+    max-height: 100%;
+  }
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-1716 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #gallery-1716 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #gallery-1716 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #gallery-1716 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #gallery-1716 .cs-text:last-of-type {
+    /* 32px - 64px */
+    margin-bottom: clamp(2rem, 7vw, 4rem);
+  }
+  #gallery-1716 .cs-text:last-of-type:before {
+    /* colored overlay rectangle - positioned absolute to the section tag because it is the nearest parent with a decalred position relative */
+    content: '';
+    width: 100%;
+    height: 80%;
+    background: var(--primary);
+    opacity: .1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #gallery-1716 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #gallery-1716 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .3s;
+  }
+  #gallery-1716 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #gallery-1716 .cs-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* sends it to the top in the 1st position */
+    order: -1;
+  }
+  #gallery-1716 .cs-picture {
+    width: 100%;
+    /* changes at tablet */
+    height: 100vw;
+    max-height: 25rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+    grid-column: span 4;
+  }
+  #gallery-1716 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-1716 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #gallery-1716 .cs-content {
+    max-width: 19rem;
+    /* 32px - 64px, ensures theres always a gap at the bottom to space out the content from the bottom of the container and let the colored rectangle shape be a little bigger and take up more space */
+    padding-bottom: clamp(2rem, 7vw, 4rem);
+  }
+  #gallery-1716 .cs-text:last-of-type {
+    /* add position relative so the colored rectangle is now absolutely positioned to the cs-text parent. We also only want these styles on the last paragraph tag */
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-1716 .cs-text:last-of-type:before {
+    width: 250vw;
+    height: 100vw;
+    top: calc(100% + 1.8rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #gallery-1716 .cs-gallery {
+    height: auto;
+  }
+  #gallery-1716 .cs-picture {
+    height: 100%;
+    max-height: 100%;
+    /* 280px - 420px */
+    min-height: clamp(17.5rem, 37vw, 26.25rem);
+  }
 }
