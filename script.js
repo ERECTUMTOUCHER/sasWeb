@@ -88,3 +88,21 @@ function slideSwitch() {
 	}
 	});
 }
+// JavaScript (Blob)
+window.addEventListener('scroll', function() {
+  var container = document.getElementById('container');
+  var svgBlob = document.querySelector('.svg-blob');
+  var boundingClientRect = container.getBoundingClientRect();
+  var blobPosition = boundingClientRect.top + window.pageYOffset;
+
+  // Adjust this value as needed to determine when the SVG blob becomes active
+  var triggerOffset = window.innerHeight * 0.5;
+
+  if (window.pageYOffset > blobPosition - triggerOffset) {
+    svgBlob.classList.add('active');
+  } else {
+    svgBlob.classList.remove('active');
+  }
+});
+
+
