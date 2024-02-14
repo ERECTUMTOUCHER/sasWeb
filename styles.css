@@ -575,6 +575,7 @@
     min-height: clamp(17.5rem, 37vw, 26.25rem);
   }
 }
+/* Navbar */
 .navbar-container {
   position: fixed;
   top: 0;
@@ -632,6 +633,7 @@
   background: #e74c3c; /* Red color */
 }
 
+/* Page Container */
 .page-container {
   margin: auto;
   width: 90%;
@@ -653,5 +655,5 @@
 .section-container h4 {
   font-size: 50px;
   font-weight: 300;
-  color: #3c3c3
-                                
+  color: #3c3c3c;
+}
