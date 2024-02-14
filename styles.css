@@ -29,13 +29,35 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  padding: 12px 24px; /* Added padding */
   margin: 4px 2px;
-  transition-duration: 0.4s;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-.button:hover {
-  background-color: #45a049; /* Darker green */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.button:hover::before {
+  width: 0;
+  height: 0;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
 }
 
 .content {
