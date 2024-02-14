@@ -30,27 +30,61 @@ document.querySelectorAll('.link').forEach(link => {
   });
 });
 
-function smoothScroll(target) {
-  const startPos = window.pageYOffset;
-  const targetPos = target.getBoundingClientRect().top + window.pageYOffset;
-  const distance = targetPos - startPos;
-  const duration = 1000; // in milliseconds
-  let startTime = null;
+// Update nav selected
+function updateNavigation() {
+	var lastId,
+    topMenu = $(".nav"), // Changed to match your CSS class name
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+    
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").parent().addClass("active");
+   }                   
+}
 
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const run = ease(timeElapsed, startPos, distance, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
+// Update slide switch highlight
+function slideSwitch() {
+	$('.switch-slide').on('click', function() {
+		
+	var activeSpan = $('.switch-toggle-slide .active');
 
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
-  }
-
-  requestAnimationFrame(animation);
+	if (activeSpan.css('left') == '0px') {
+		activeSpan.css('left', '50%');
+	}
+	
+	if (activeSpan.css('left') == '125px') {
+		activeSpan.css('left', '0');
+	}
+	
+	if ($(this).hasClass('active-switch')) {
+		$('.switch-slide').addClass('active-switch')
+		$(this).removeClass('active-switch');
+	}
+	else {
+		$('.switch-slide').removeClass('active-switch')
+		$(this).addClass('active-switch');
+	}
+	});
 }
