@@ -90,19 +90,25 @@ function slideSwitch() {
 }
 // JavaScript (Blob)
 window.addEventListener('scroll', function() {
-  var container = document.getElementById('container');
-  var svgBlob = document.querySelector('.svg-blob');
-  var boundingClientRect = container.getBoundingClientRect();
-  var blobPosition = boundingClientRect.top + window.pageYOffset;
+    var sections = document.querySelectorAll('.section-container');
+    var svgBlob = document.querySelector('.svg-blob');
+    var triggerOffset = window.innerHeight * 0.5;
 
-  // Adjust this value as needed to determine when the SVG blob becomes active
-  var triggerOffset = window.innerHeight * 0.5;
+    // Loop through each section
+    sections.forEach(function(section) {
+        var boundingClientRect = section.getBoundingClientRect();
+        var sectionPosition = boundingClientRect.top + window.pageYOffset;
 
-  if (window.pageYOffset > blobPosition - triggerOffset) {
-    svgBlob.classList.add('active');
-  } else {
-    svgBlob.classList.remove('active');
-  }
+        // Check if the section is in the viewport
+        if (window.pageYOffset > sectionPosition - triggerOffset) {
+            // Update the SVG blob when the section is in view
+            svgBlob.style.top = section.offsetTop + 'px';
+            svgBlob.classList.add('active');
+        } else {
+            svgBlob.classList.remove('active');
+        }
+    });
 });
+
 
 
