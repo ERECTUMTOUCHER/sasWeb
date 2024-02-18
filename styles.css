@@ -1687,12 +1687,12 @@ label {
 	transition: transform 400ms ease-out;
 	display: inline-block;
   min-height: 100%;
-	width: 30vw;
-	height: 30vh;
+	width: 100vw;
+	height: 20vh;
 	position: relative;
 	z-index: 1;
 	text-align: center;
-	line-height: 100vh;
+	line-height: 20vh;
 }
 
 form {
