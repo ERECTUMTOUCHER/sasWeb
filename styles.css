@@ -663,22 +663,6 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #hero-1619 .cs-topper {
-    /* 13px - 16px */
-    font-size: clamp(0.8125rem, 1.5vw, 1rem);
-    line-height: 1.2em;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0.25rem;
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-  }
   #hero-1619 .cs-chevron {
     --chevronColor: var(--primary);
     width: 3rem;
