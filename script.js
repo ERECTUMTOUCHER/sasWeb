@@ -46,3 +46,14 @@
         item.addEventListener('click', onClick)
         }
                                 
+//Announcement Board
+window.onload = function() {
+  const slides = document.querySelectorAll('.announcement-slider .slide');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.display = 'block';
+  }, 5000); // Change 5000 to adjust the interval time in milliseconds
+};
