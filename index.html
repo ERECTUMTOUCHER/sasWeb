@@ -179,27 +179,58 @@
 <!-- ============================================ -->
 <!--                  Spotify Carasol                     -->
 <!-- ============================================ -->
-    <div class="container">
-        <div class="episode-list" id="episodeList">
-            <!-- Example list of episodes -->
-            <div class="episode-item" data-index="1">
-                <img src="episode1.jpg" alt="Episode 1">
-                <span class="episode-title">Episode 1</span>
+    <section class="horizontal-scroll-section">
+        <div class="container">
+            <div class="hs__wrapper">
+                <div class="hs__header">
+                    <h2 class="hs__headline">Headline 1</h2>
+                    <div class="hs__arrows">
+                        <a class="arrow disabled arrow-prev"></a>
+                        <a class="arrow arrow-next"></a>
+                    </div>
+                </div>
+                <ul class="hs">
+                    <li class="hs__item">
+                        <div class="hs__item__image__wrapper">
+                            <img class="hs__item__image" src="https://picsum.photos/id/101/300/300" alt="">
+                        </div>
+                        <div class="hs__item__description">
+                            <span class="hs__item__title">Amazing title 1</span>
+                            <span class="hs__item__subtitle">some subtitle</span>
+                        </div>
+                    </li>
+                    <!-- Add more list items as needed -->
+                </ul>
             </div>
-            <div class="episode-item" data-index="2">
-                <img src="episode2.jpg" alt="Episode 2">
-                <span class="episode-title">Episode 2</span>
-            </div>
-            <!-- Add more episodes as needed -->
         </div>
-        <div class="episode-details" id="episodeDetails">
-            <!-- Episode details will be displayed here -->
-        </div>
-    </div>
 
+        <div class="description">
+            <h3>Description</h3>
+            <p><strong>Work in progress</strong> – Horizontal scroll containers are hyped right now. Whether you browse the Appstore, search for articles on Medium or set some filters in Instagram. Many apps use this kind of pattern. But most of them are very touch and mobile oriented. So I wondered how to make it nice on touch AND desktop.</p>
+            <p>Depending on your desktop layout, you probably don't want the cards to run over the edge of the screen. Let's take a look at the "Home" section of Spotify. On the desktop, they show 4 to 6 cards in a slider with arrows at the top. And with touch/mobile they use the horizontal overflow scrolling.</p>
+            <p>So let's recreate exactly this behaviour for responsive web use.</p>
+            <p>Things already achieved:</p>
+            <ol>
+                <li>4 column grid on desktop. Tease the 4th on touch.</li>
+                <li>Hide arrows on touch</li>
+                <li>Disable corresponding arrow when end or start has been reached</li>
+                <li>(As suggested) - Toggle arrow state on drag and scroll as well</li>
+                <li>Always keep left and right spacings</li>
+                <li>No ugly scrollbars on any browser</li>
+                <li>Horizontal scrolling, dragging or arrow-click</li>
+                <li>Multiple instances</li>
+                <li>CSS Grid and CSS Vars are nice, but let's make this work on IE11 as well</li>
+            </ol>
+            <p>Todo / open (feel free to left suggestions in the comments)</p>
+            <ol>
+                <li>If you click an arrow after box has been dragged / scrolled, it is not snapping to the grid anymore.</li>
+                <li>Get rid of jQuery</li>
+            </ol>
+            <p><strong>BONUS</strong> – I made another alternative version here: <a href="https://codepen.io/kilianso/pen/WqdVLx?editors=1010" target="_blank">https://codepen.io/kilianso/pen/WqdVLx?editors=1010</a></p>
+        </div>
+    </section>
+    
     <script src="scripts.js"></script>
-</body>
-</html>
 
 <!-- ============================================ -->
 <!--                  Gallery                     -->
