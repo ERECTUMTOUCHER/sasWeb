@@ -67,3 +67,24 @@ function autoSlide() {
 setInterval(autoSlide, 10000); // Auto-slide every 10 seconds
 
 showSlide(slideIndex);
+//Spotify Carasol
+const scroller = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
+function showMainPost(postId) {
+    const mainPost = document.getElementById('mainPost');
+    const hoveredPost = document.getElementById(postId);
+
+    // Clone the content of hovered blog post
+    const clonedContent = hoveredPost.cloneNode(true);
+
+    // Remove the anchor tag from the cloned content
+    clonedContent.querySelector('a').remove();
+
+    // Clear main blog post content
+    mainPost.innerHTML = '';
+
+    // Append cloned content to main blog post
+    mainPost.appendChild(clonedContent);
+}
