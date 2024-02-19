@@ -1683,59 +1683,62 @@
 <!-- ============================================ -->
 <!--                 Slider                 -->
 <!-- ============================================ -->
-.announcement-slider {
-  width: 100%;
-  overflow: hidden;
+#announcement-slider {
   position: relative;
+  background-color: #f7f7f7; /* Add a background color to distinguish the section */
+  padding: 20px 0; /* Add padding to the section */
+  height: 100vh; /* Make the section fullscreen */
+  overflow: hidden;
 }
 
-.slide {
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-}
-
-.slide a {
-  display: block;
-}
-
-/* Adjust animation speed as needed */
-@keyframes slide {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%;
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  100% {
-    left: -400%;
-  }
-}
-
-.announcement-slider .slide {
+#announcement-slider .border {
   position: absolute;
-  width: 500%; /* Adjust based on the number of slides */
-  animation: slide 20s infinite;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+#announcement-slider .slider-container {
+  position: relative;
+  max-width: 100%;
+  height: 100%;
+}
+
+#announcement-slider .slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+#announcement-slider .slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+#announcement-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the entire slide */
+  padding: 10px; /* Add your desired padding */
+}
+
+#announcement-slider button.prev,
+#announcement-slider button.next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+#announcement-slider button.prev {
+  left: 0;
+}
+
+#announcement-slider button.next {
+  right: 0;
+}
