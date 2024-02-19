@@ -68,22 +68,24 @@ setInterval(autoSlide, 10000); // Auto-slide every 10 seconds
 
 showSlide(slideIndex);
 //Spotify Carasol
+const episodes = [
+    { title: "Episode 1", description: "Description for Episode 1", image: "episode1.jpg" },
+    { title: "Episode 2", description: "Description for Episode 2", image: "episode2.jpg" },
+    // Add more episodes as needed
+];
 
-const scroller = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
+const episodeList = document.getElementById('episodeList');
+const episodeDetails = document.getElementById('episodeDetails');
+
+episodeList.addEventListener('mouseover', (event) => {
+    if (event.target.classList.contains('episode-item')) {
+        const index = parseInt(event.target.dataset.index) - 1;
+        const episode = episodes[index];
+        episodeDetails.innerHTML = `
+            <h2>${episode.title}</h2>
+            <img src="${episode.image}" alt="${episode.title}">
+            <p>${episode.description}</p>
+        `;
+    }
 });
 
-function showMainPost(postId) {
-    const mainPost = document.getElementById('videoPreview');
-    const hoveredPost = document.getElementById(postId);
-
-    // Clone the content of hovered blog post
-    const clonedContent = hoveredPost.cloneNode(true);
-
-    // Clear main blog post content
-    mainPost.innerHTML = '';
-
-    // Append cloned content to main blog post
-    mainPost.appendChild(clonedContent);
-}
