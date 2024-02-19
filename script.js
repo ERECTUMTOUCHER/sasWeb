@@ -47,45 +47,65 @@
         }
                                 
 //Announcement Board
-let slideIndex = 0;
-const slides = document.querySelectorAll('#announcement-slider .slide');
+document.addEventListener("DOMContentLoaded", function() {
+  var instances = document.querySelectorAll(".hs__wrapper");
 
-function showSlide(n) {
-  slideIndex = (n + slides.length) % slides.length;
-  const slideWidth = slides[0].clientWidth;
-  document.querySelector('#announcement-slider .slider').style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-}
+  instances.forEach(function(instance) {
+    var arrows = instance.querySelectorAll(".arrow");
+    var prevArrow = instance.querySelector('.arrow-prev');
+    var nextArrow = instance.querySelector('.arrow-next');
+    var box = instance.querySelector(".hs");
+    var x = 0;
+    var mx = 0;
+    var maxScrollWidth = box.scrollWidth - (box.clientWidth / 2) - (box.offsetWidth / 2);
 
-function moveSlide(n) {
-  showSlide(slideIndex += n);
-}
+    arrows.forEach(function(arrow) {
+      arrow.addEventListener('click', function() {
+        if (this.classList.contains("arrow-next")) {
+          x = ((box.offsetWidth / 2)) + box.scrollLeft - 10;
+          box.scrollTo({
+            left: x,
+            behavior: 'smooth'
+          });
+        } else {
+          x = ((box.offsetWidth / 2)) - box.scrollLeft - 10;
+          box.scrollTo({
+            left: -x,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
-function autoSlide() {
-  moveSlide(1);
-}
+    box.addEventListener('mousemove', function(e) {
+      var mx2 = e.pageX - this.offsetLeft;
+      if (mx) this.scrollLeft = this.sx + mx - mx2;
+    });
 
-setInterval(autoSlide, 10000); // Auto-slide every 10 seconds
+    box.addEventListener('mousedown', function(e) {
+      this.sx = this.scrollLeft;
+      mx = e.pageX - this.offsetLeft;
+    });
 
-showSlide(slideIndex);
-//Spotify Carasol
-const episodes = [
-    { title: "Episode 1", description: "Description for Episode 1", image: "episode1.jpg" },
-    { title: "Episode 2", description: "Description for Episode 2", image: "episode2.jpg" },
-    // Add more episodes as needed
-];
+    box.addEventListener('scroll', function() {
+      toggleArrows();
+    });
 
-const episodeList = document.getElementById('episodeList');
-const episodeDetails = document.getElementById('episodeDetails');
+    document.addEventListener("mouseup", function() {
+      mx = 0;
+    });
 
-episodeList.addEventListener('mouseover', (event) => {
-    if (event.target.classList.contains('episode-item')) {
-        const index = parseInt(event.target.dataset.index) - 1;
-        const episode = episodes[index];
-        episodeDetails.innerHTML = `
-            <h2>${episode.title}</h2>
-            <img src="${episode.image}" alt="${episode.title}">
-            <p>${episode.description}</p>
-        `;
+    function toggleArrows() {
+      if (box.scrollLeft > maxScrollWidth - 10) {
+        nextArrow.classList.add('disabled');
+      } else if (box.scrollLeft < 10) {
+        prevArrow.classList.add('disabled');
+      } else {
+        nextArrow.classList.remove('disabled');
+        prevArrow.classList.remove('disabled');
+      }
     }
+  });
 });
+
 
