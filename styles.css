@@ -1570,11 +1570,12 @@ span.blank-space {
 
 .blog {
     position: relative;
-    display: flex;
 }
 
 .video {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .video_preview {
@@ -1586,9 +1587,9 @@ span.blank-space {
 }
 
 .blogpost {
-    flex: 1;
-    padding-left: 200px; /* Adjust as needed */
-    position: relative;
+    position: absolute;
+    left: 200px; /* Adjust as needed */
+    top: 0;
 }
 
 .blogpost_preview {
@@ -1614,8 +1615,9 @@ span.blank-space {
 }
 
 .main-blogpost {
-    position: relative;
-    flex: 1;
+    position: absolute;
+    left: 400px; /* Adjust as needed */
+    top: 0;
 }
 
 
