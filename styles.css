@@ -1546,3 +1546,10 @@
 #announcement-slider button.next {
   right: 0;
 }
+
+span.blank-space {
+    display: inline-block;
+    width: 10px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+    background-color: white;
+}
