@@ -47,13 +47,23 @@
         }
                                 
 //Announcement Board
-window.onload = function() {
-  const slides = document.querySelectorAll('.announcement-slider .slide');
-  let currentSlide = 0;
+let slideIndex = 0;
+const slides = document.querySelectorAll('#announcement-slider .slide');
 
-  setInterval(() => {
-    slides[currentSlide].style.display = 'none';
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].style.display = 'block';
-  }, 5000); // Change 5000 to adjust the interval time in milliseconds
-};
+function showSlide(n) {
+  slideIndex = (n + slides.length) % slides.length;
+  const slideWidth = slides[0].clientWidth;
+  document.querySelector('#announcement-slider .slider').style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+}
+
+function moveSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function autoSlide() {
+  moveSlide(1);
+}
+
+setInterval(autoSlide, 10000); // Auto-slide every 10 seconds
+
+showSlide(slideIndex);
