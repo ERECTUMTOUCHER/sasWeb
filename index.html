@@ -92,27 +92,26 @@
 <!-- ============================================ -->
 <!--               Announcement Board             -->
 <!-- ============================================ -->
-<section class="announcement-section">
-  <div class="announcement-slider">
-    <div class="slide">
-      <a href="link1.html">
-        <img src="https://via.placeholder.com/800x400" alt="Announcement 1">
-      </a>
+<section id="announcement-slider">
+  <svg class="border" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <!-- Removed the rect element -->
+  </svg>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <a href="https://example.com/link1"><img src="https://designshack.net/wp-content/uploads/placeholder-image.png" alt="Slide 1"></a>
+      </div>
+      <div class="slide">
+        <a href="https://example.com/link2"><img src="image2.jpg" alt="Slide 2"></a>
+      </div>
+      <div class="slide">
+        <a href="https://example.com/link3"><img src="image3.jpg" alt="Slide 3"></a>
+      </div>
     </div>
-    <div class="slide">
-      <a href="link2.html">
-        <img src="https://via.placeholder.com/800x400" alt="Announcement 2">
-      </a>
-    </div>
-    <div class="slide">
-      <a href="link3.html">
-        <img src="https://via.placeholder.com/800x400" alt="Announcement 3">
-      </a>
-    </div>
-    <!-- Add more slides as needed -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
 </section>
-
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
