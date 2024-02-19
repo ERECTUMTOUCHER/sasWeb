@@ -1554,11 +1554,38 @@ span.blank-space {
     background-color: white;
 }
 /*spotify Carasol */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* all font classes */
+.txt_lg_white {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.txt_md_white {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
 .txt_md_grey {
     color: #bbbebc;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     font-weight: 500;
+}
+
+.txt_lg_black {
+    color: #253439;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .txt_md_black {
@@ -1568,34 +1595,59 @@ span.blank-space {
     font-weight: 500;
 }
 
+.txt_sm_black {
+    color: #253439;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* end of font classes */
+
+/* blog post section */
+.blog-section {
+    width: 90%;
+    max-width: 1200px; /* Limit width to prevent clashes */
+    margin: 0 auto; /* Center the section */
+}
+
 .blog {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Adjust column widths as needed */
+    display: flex;
+    justify-content: space-between;
 }
 
 .video {
-    grid-column: 1 / 2;
+    width: 60%;
+    padding: 2em;
 }
 
-.video_preview {
-    position: relative;
+.video_preview > img {
+    width: 100%;
+    border-radius: 25px;
 }
 
-.video_preview_description {
-    position: relative;
+.video_preview_description > h1,
+.blogpost_preview_txt > h3 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.video_preview_description > p,
+.blogpost_preview_txt > p {
+    font-size: 18px;
+    line-height: 1.5em;
 }
 
 .blogpost {
-    grid-column: 2 / 3;
+    padding: 2em;
 }
 
 .blogpost_preview {
-    position: relative;
+    display: flex;
 }
 
 .blogpost_preview_img {
-    width: 100%; /* Adjust image width as needed */
-    height: auto; /* Adjust image height as needed */
+    width: 25%;
+    height: 180px;
     padding: 0.5em;
     border-radius: 0 20px 20px 20px;
 }
@@ -1607,8 +1659,10 @@ span.blank-space {
 }
 
 .blogpost_preview_txt {
+    width: 50%;
     padding: 1em 0 0 2em;
 }
+/* end of blog post section */
 
 
 
