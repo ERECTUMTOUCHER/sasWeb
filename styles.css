@@ -1554,9 +1554,27 @@ span.blank-space {
     background-color: white;
 }
 /*spotify Carasol */
+.blog {
+    position: relative;
+    display: flex;
+}
+
 .blogpost_scroll {
     overflow-y: auto;
     max-height: 400px; /* Adjust height as needed */
+    position: absolute;
+    left: 0;
+}
+
+.blogpost {
+    flex: 1;
+    padding-left: 200px; /* Adjust as needed */
+    position: relative;
+}
+
+.main-blogpost {
+    position: relative;
+    flex: 1;
 }
 
 .scroll-btn {
@@ -1573,49 +1591,8 @@ span.blank-space {
 .scroll-btn:hover {
     background-color: #ddd;
 }
-.txt_md_grey{
-    color:#bbbebc;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+
+.blogpost_preview {
+    position: relative;
 }
 
-.txt_md_black{
-    color: #253439;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.blog{
-    width:90%;
-    margin-left:7em;
-    display: flex;
-    justify-content: space-between;
-}
-
-.blogpost{
-    padding:2em;
-}
-
-.blogpost_preview{
-    display:flex;
-}
-
-.blogpost_preview_img{
-    width: 25%;
-    height:180px;
-    padding:.5em;
-    border-radius: 0 20px 20px 20px;
-}
-
-.blogpost_preview_img>img{
-    width:100%;
-    height:100%;
-    border-radius: 0 15px 15px 15px;
-}
-
-.blogpost_preview_txt{
-    width:50%;
-    padding:1em 0 0 2em;
-}
