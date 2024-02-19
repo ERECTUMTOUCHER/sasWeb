@@ -1554,13 +1554,6 @@ span.blank-space {
     background-color: white;
 }
 /*spotify Carasol */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 .container {
     display: flex;
     height: 100vh;
