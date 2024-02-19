@@ -1555,114 +1555,58 @@ span.blank-space {
 }
 /*spotify Carasol */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-/* all font classes */
-.txt_lg_white {
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.txt_md_white {
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.txt_md_grey {
-    color: #bbbebc;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.txt_lg_black {
-    color: #253439;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.txt_md_black {
-    color: #253439;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.txt_sm_black {
-    color: #253439;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-}
-/* end of font classes */
-
-/* blog post section */
-.blog-section {
-    width: 90%;
-    max-width: 1200px; /* Limit width to prevent clashes */
-    margin: 0 auto; /* Center the section */
-}
-
-.blog {
+.container {
     display: flex;
-    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.video {
-    width: 60%;
-    padding: 2em;
+.episode-list {
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
 }
 
-.video_preview > img {
-    width: 100%;
-    border-radius: 25px;
-}
-
-.video_preview_description > h1,
-.blogpost_preview_txt > h3 {
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-.video_preview_description > p,
-.blogpost_preview_txt > p {
-    font-size: 18px;
-    line-height: 1.5em;
-}
-
-.blogpost {
-    padding: 2em;
-}
-
-.blogpost_preview {
+.episode-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     display: flex;
+    align-items: center;
 }
 
-.blogpost_preview_img {
-    width: 25%;
-    height: 180px;
-    padding: 0.5em;
-    border-radius: 0 20px 20px 20px;
+.episode-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-.blogpost_preview_img > img {
+.episode-item:hover {
+    background-color: #555;
+}
+
+.episode-details {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.episode-details h2 {
+    margin-top: 0;
+}
+
+.episode-details img {
     width: 100%;
-    height: 100%;
-    border-radius: 0 15px 15px 15px;
+    height: auto;
 }
 
-.blogpost_preview_txt {
-    width: 50%;
-    padding: 1em 0 0 2em;
-}
-/* end of blog post section */
 
 
 
