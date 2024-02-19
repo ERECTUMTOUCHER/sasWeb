@@ -1556,8 +1556,7 @@ span.blank-space {
 
 /* Carousel container */
 .carousel {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%; /* Full width */
   overflow: hidden;
   position: relative;
 }
@@ -1566,21 +1565,46 @@ span.blank-space {
 .slide-container {
   display: flex;
   transition: transform 0.5s ease;
+  animation: slide 15s infinite linear; /* Keyframe animation */
 }
 
 /* Individual slide */
 .slide {
-  min-width: 300px; /* Adjust as needed */
-  margin-right: 20px; /* Adjust spacing */
+  min-width: 100%; /* Full width */
 }
 
 /* Episode card styles (just for demonstration) */
 .episode-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
+/* Episode card image */
+.episode-card img {
+  max-width: 100%;
+}
 
+/* Navigation buttons */
+.nav-btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.nav-btn:hover {
+  background-color: #14843f;
+}
+
+/* Keyframe animation for sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
