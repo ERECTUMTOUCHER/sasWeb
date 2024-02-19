@@ -68,12 +68,8 @@ setInterval(autoSlide, 10000); // Auto-slide every 10 seconds
 
 showSlide(slideIndex);
 //Spotify Carasol
-const scroller = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
 function showMainPost(postId) {
-    const mainPost = document.getElementById('mainPost');
+    const mainPost = document.querySelector('.main-blogpost');
     const hoveredPost = document.getElementById(postId);
 
     // Clone the content of hovered blog post
