@@ -179,41 +179,27 @@
 <!-- ============================================ -->
 <!--                  Spotify Carasol                     -->
 <!-- ============================================ -->
-<div data-scroll-container>
-    <div class="main">
-        <section data-scroll-section id="pin">
-            <h1 class="centered-h1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" data-scroll-class="appear" data-scroll-repeat="true">From the Blog</h1>
-            <div class="blog">
-                <div class="video" data-scroll data-scroll-sticky data-scroll-target="#pin">
-                    <div class="video_preview" id="videoPreview">
-                        <img src="https://images.unsplash.com/photo-1583396618422-597b2755de83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1048&q=80" alt="">
-                    </div>
-                    <div class="video_preview_description">
-                        <h1 class="txt_md_black">Bedugul Bali! the Wonderful god  place in the world</h1>
-                        <p class="txt_md_grey">Bedugul is one of the most famous places in Bali Indonesia, Bedugul is a tourism area located in the middle of the island of Bali. The Bedugul tourism area is very well known as the best place for a family vacation in Bali. Offers natural attractions, Such as large plantation areas, lake views and the beauty of Hindu Temple architecture.</p>
-                        <a href="#" class="txt_lg_black" style="text-decoration: none;"><i>Read more</i> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="blogpost" id="blogPosts">
-                    <a href="#" class="blogpost_link" onmouseover="showMainPost('videoPreview')">
-                        <div class="blogpost_preview" id="blogpost1">
-                            <div class="blogpost_preview_img">
-                                <img src="https://images.unsplash.com/photo-1581775231124-4f70b143b85c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80" alt="">
-                            </div>
-                            <div class="blogpost_preview_txt">
-                                <h3 class="txt_md_black">The most wonderful underwater</h3>
-                                <p class="txt_md_grey">@monicafer</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Add more blog posts here -->
-
-                </div>
+    <div class="container">
+        <div class="episode-list" id="episodeList">
+            <!-- Example list of episodes -->
+            <div class="episode-item" data-index="1">
+                <img src="episode1.jpg" alt="Episode 1">
+                <span class="episode-title">Episode 1</span>
             </div>
-        </section>
+            <div class="episode-item" data-index="2">
+                <img src="episode2.jpg" alt="Episode 2">
+                <span class="episode-title">Episode 2</span>
+            </div>
+            <!-- Add more episodes as needed -->
+        </div>
+        <div class="episode-details" id="episodeDetails">
+            <!-- Episode details will be displayed here -->
+        </div>
     </div>
-</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
 
 <!-- ============================================ -->
 <!--                  Gallery                     -->
