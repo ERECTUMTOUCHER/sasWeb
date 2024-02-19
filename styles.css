@@ -1484,9 +1484,9 @@
         width: 50%;
     }
 }
-<!-- ============================================ -->
-<!--                 Slider                 -->
-<!-- ============================================ -->
+/*-- -------------------------- -->
+<---     Announcement Slider    -->
+<--- -------------------------- -*/
 #announcement-slider {
   position: relative;
   background-color: #f7f7f7; /* Add a background color to distinguish the section */
