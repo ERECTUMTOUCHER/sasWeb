@@ -108,4 +108,31 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// JavaScript for carousel functionality
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+  });
+  currentIndex = index;
+}
+
+function nextSlide() {
+  if (currentIndex < slides.length - 1) {
+    showSlide(currentIndex + 1);
+  } else {
+    showSlide(0);
+  }
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    showSlide(currentIndex - 1);
+  } else {
+    showSlide(slides.length - 1);
+  }
+}
+
 
