@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // JavaScript for carousel functionality
 const slides = document.querySelectorAll('.slide');
 let currentIndex = 0;
+let slideInterval;
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
@@ -135,4 +136,19 @@ function prevSlide() {
   }
 }
 
+// Automatically slide to the next slide every 5 seconds
+function startSlideShow() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
 
+// Stop the automatic sliding when the page loses focus
+document.addEventListener("visibilitychange", function() {
+  if (document.visibilityState === 'hidden') {
+    clearInterval(slideInterval);
+  } else {
+    startSlideShow();
+  }
+});
+
+// Start the automatic sliding
+startSlideShow();
