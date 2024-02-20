@@ -1478,7 +1478,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 0.5rem;
+        right: 0.rem;
     }
     #cta-1394 .cs-picture {
         width: 50%;
