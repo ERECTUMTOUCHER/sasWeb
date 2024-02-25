@@ -1753,4 +1753,29 @@ span.blank-space {
     margin: 0;
   }
 }
-                                                   
+.cs-container {
+    position: relative; /* Set container to relative positioning */
+}
+
+.additional-images {
+    position: absolute; /* Set additional images to absolute positioning */
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.additional-image {
+    flex: 0 0 auto;
+    margin: 10px; /* Adjust margin as needed */
+}
+
+.additional-image picture {
+    display: block;
+}
+
+.additional-image img {
+    max-width: 100%; /* Adjust image size as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+}
+
