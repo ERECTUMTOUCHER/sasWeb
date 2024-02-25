@@ -1484,14 +1484,12 @@
         width: 50%;
     }
 }
-/*-- -------------------------- -->
-<---     Announcement Slider    -->
-<--- -------------------------- -*/
+/* Announcement Slider */
 #announcement-slider {
   position: relative;
-  background-color: #f7f7f7; /* Add a background color to distinguish the section */
-  padding: 20px 0; /* Add padding to the section */
-  height: 100vh; /* Make the section fullscreen */
+  background-color: #f7f7f7;
+  padding: 20px 0;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -1523,8 +1521,8 @@
 #announcement-slider .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure images cover the entire slide */
-  padding: 10px; /* Add your desired padding */
+  object-fit: cover;
+  padding: 10px;
 }
 
 #announcement-slider button.prev,
@@ -1537,6 +1535,7 @@
   cursor: pointer;
   padding: 10px;
   z-index: 2;
+  transform: translateY(-50%);
 }
 
 #announcement-slider button.prev {
@@ -1548,11 +1547,12 @@
 }
 
 span.blank-space {
-    display: inline-block;
-    width: 10px; /* Adjust the width as needed */
-    height: 100px; /* Adjust the height as needed */
-    background-color: white;
+  display: inline-block;
+  width: 10px;
+  height: 100px;
+  background-color: white;
 }
+
 /*-- -------------------------- -->
 <---          Contact           -->
 <--- -------------------------- -*/
