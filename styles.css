@@ -1754,19 +1754,20 @@ span.blank-space {
   }
 }
 .cs-container {
-    position: relative; /* Set container to relative positioning */
+    position: relative;
 }
 
 .additional-images {
-    position: absolute; /* Set additional images to absolute positioning */
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
 }
 
 .additional-image {
+    position: relative; /* Make sure it's relative to .cs-container */
     flex: 0 0 auto;
-    margin: 10px; /* Adjust margin as needed */
+    margin: 10px;
 }
 
 .additional-image picture {
@@ -1774,8 +1775,10 @@ span.blank-space {
 }
 
 .additional-image img {
-    max-width: 100%; /* Adjust image size as needed */
+    max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    border-radius: 8px;
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Put additional images in front */
 }
 
