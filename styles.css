@@ -711,35 +711,6 @@
     height: 111vw;
     max-height: 31.25rem;
   }
-  #sbsr-1599 .cs-stats-group {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* 28px - 40px */
-    gap: clamp(1.75rem, 3vw, 2.5rem);
-  }
-  #sbsr-1599 .cs-stats {
-    width: 100%;
-    max-width: 39.375rem;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 1.5rem;
-    column-gap: 0.75rem;
-  }
-  #sbsr-1599 .cs-stat {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 1.5rem 0;
-    border-bottom: 1px solid var(--primary);
-    /* making flex so we can align a heading with 1 line to the bottom */
-    display: flex;
-    grid-column: span 4;
-    flex-direction: column;
-    align-self: stretch;
-    align-content: space-between;
-  }
   #sbsr-1599 .cs-number {
     /* 31px - 39px */
     font-size: clamp(1.9375rem, 3vw, 2.4375rem);
