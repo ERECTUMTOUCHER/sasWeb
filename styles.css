@@ -1764,12 +1764,16 @@ span.blank-space {
     display: flex;
 }
 
-.additional-image {
+.additional-image1 {
     position: relative; /* Make sure it's relative to .cs-container */
     flex: 0 0 auto;
     margin: 10px;
 }
-
+.additional-image2 {
+  position: relative; /* Make sure it's relative to .cs-container */
+    flex: 0 0 auto;
+    margin: 20px;
+}
 .additional-image picture {
     display: block;
 }
