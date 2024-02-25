@@ -1774,24 +1774,5 @@ span.blank-space {
     display: block;
 }
 
-.additional-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    position: relative; /* Ensure z-index works */
-    z-index: 1; /* Put additional images in front */
-}
-.additional-image {
-    position: absolute;
-}
 
-.additional-image-top-left {
-    top: 0;
-    left: 0;
-}
-
-.additional-image-bottom-right {
-    bottom: 0;
-    right: 0;
-}
 
