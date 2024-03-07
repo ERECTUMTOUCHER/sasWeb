@@ -1,3 +1,4 @@
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     var slider = document.querySelector("#announcement-slider .slider");
     var slides = document.querySelectorAll("#announcement-slider .slide");
