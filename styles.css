@@ -19,7 +19,6 @@
   }
   #cs-navigation {
     width: 94%;
-    max-width: 80rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
@@ -72,8 +71,8 @@
     gap: 1.5rem;
   }
   #cs-navigation .cs-logo {
-    width: auto;
-    max-width: 12.5rem;
+    width: 100%;
+    max-width: 63.9375rem;
     height: 100%;
     margin: 0 auto 0 0;
     /* prevents padding from affecting height and width */
@@ -85,7 +84,7 @@
     z-index: 10;
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
+    width: 32px;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
@@ -112,23 +111,6 @@
     display: none;
     position: relative;
     z-index: 10;
-  }
-  #cs-navigation .cs-phone {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-decoration: none;
-    margin: 0;
-    color: var(--headerColor);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    transition: opacity 0.3s, color 0.3s;
-  }
-  #cs-navigation .cs-phone-icon {
-    width: 1.5rem;
-    height: auto;
-    display: block;
   }
   #cs-navigation .cs-social {
     display: none;
@@ -496,8 +478,8 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
-    max-width: 21.875rem;
+    width: 100%;
+    max-width: 67.875rem;
     height: 2rem;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
@@ -508,8 +490,8 @@
     z-index: 100;
   }
   #cs-navigation .cs-logo img {
-    width: auto;
-    height: 100%;
+    width: 300px;
+    height: 100px;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
@@ -519,23 +501,7 @@
     align-items: center;
     gap: 1.5rem;
   }
-  #cs-navigation .cs-phone {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-decoration: none;
-    margin: 0;
-    color: var(--headerColor);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    transition: opacity 0.3s, color 0.3s;
-  }
-  #cs-navigation .cs-phone-icon {
-    width: 1.5rem;
-    height: auto;
-    display: block;
-  }
+
   #cs-navigation .cs-social {
     height: 2rem;
     opacity: 1;
@@ -661,7 +627,6 @@
     display: flex;
   }
 }
-                                
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbsr-1599 {
@@ -1812,6 +1777,3 @@ span.blank-space {
 .additional-image picture {
     display: block;
 }
-
-
-
